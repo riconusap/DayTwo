@@ -3,16 +3,48 @@ body {
   margin: 0;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.attribution {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--clr-attribution);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
 .container {
-  padding: 3em;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 0em;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 900px;
+  margin: auto;
 }
 
 .container .quote {
+  width: 375px;
   padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,6 +69,7 @@ body {
   color: #f2f2f2;
   font-family: "Lexend Deca", sans-serif;
   text-transform: uppercase;
+  font-size: 35px;
 }
 
 .container .quote img {
@@ -49,13 +82,14 @@ body {
   height: 40px;
   border-radius: 25px;
   font-size: 15px;
-  width: 50%;
+  width: 70%;
   border: none;
   font-family: "Lexend Deca", sans-serif;
 }
 
 .sedans {
   background-color: #e38826;
+  border-radius: 10px 10px 0 0px;
 }
 
 .sedans button {
@@ -84,6 +118,7 @@ body {
 
 .luxury {
   background-color: #004241;
+  border-radius: 0px 0 10px 10px;
 }
 
 .luxury button {
@@ -94,5 +129,30 @@ body {
   background-color: #004241;
   color: white;
   border: 1px solid white;
+}
+
+@media (min-width: 990px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sedans {
+    border-radius: 10px 0px 0 10px;
+  }
+  .luxury {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
