@@ -1,41 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 body {
   margin: 0;
-  font-family: "Nunito";
 }
 
 .container {
   padding: 3em;
   display: -ms-grid;
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 0em;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .container .quote {
   padding: 2em;
-  border-radius: 0.3em;
-  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.container p {
-  margin-top: 0;
+.container .quote p {
+  margin-top: 10px;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.container span {
+.container .quote span {
   font-weight: bold;
   position: relative;
-  margin-left: 15px;
+  margin-top: 48px;
+  color: #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
 }
 
-.container span:before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 10px;
-  border-bottom: 1px solid black;
-  top: 10px;
-  left: -15px;
+.container .quote img {
+  margin-top: 10px;
+  width: 100px;
+}
+
+.container .quote button {
+  margin-top: 62px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 15px;
+  width: 50%;
+  border: none;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.sedans {
+  background-color: #e38826;
+}
+
+.sedans button {
+  color: #e38826;
+}
+
+.sedans button:active {
+  background-color: #e38826;
+  color: white;
+  border: 1px solid white;
+}
+
+.suvs {
+  background-color: #006970;
+}
+
+.suvs button {
+  color: #006970;
+}
+
+.suvs button:active {
+  background-color: #006970;
+  color: white;
+  border: 1px solid white;
+}
+
+.luxury {
+  background-color: #004241;
+}
+
+.luxury button {
+  color: #006970;
+}
+
+.luxury button:active {
+  background-color: #004241;
+  color: white;
+  border: 1px solid white;
 }
 /*# sourceMappingURL=styles.css.map */

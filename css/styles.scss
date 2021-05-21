@@ -1,35 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 body {
   margin: 0;
-  font-family: "Nunito";
 }
 .container {
   padding: 3em;
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 0em;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   .quote {
     padding: 2em;
-    border-radius: 0.3em;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  p {
-    margin-top: 0;
-  }
+    display: flex;
+    flex-direction: column;
 
-  span {
-    font-weight: bold;
-    position: relative;
-    margin-left: 15px;
+    p {
+      margin-top: 10px;
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 15px;
+      color: hsla(0, 0%, 100%, 0.75);
+    }
 
-    &:before {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 10px;
-      border-bottom: 1px solid black;
-      top: 10px;
-      left: -15px;
+    span {
+      font-weight: bold;
+      position: relative;
+      margin-top: 48px;
+      color: hsl(0, 0%, 95%);
+      font-family: "Lexend Deca", sans-serif;
+      text-transform: uppercase;
+    }
+    img {
+      margin-top: 10px;
+      width: 100px;
+    }
+    button {
+      margin-top: 62px;
+      height: 40px;
+      border-radius: 25px;
+      font-size: 15px;
+      width: 50%;
+      border: none;
+      font-family: "Lexend Deca", sans-serif;
+    }
+  }
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  button {
+    color: hsl(31, 77%, 52%);
+    &:active {
+      background-color: hsl(31, 77%, 52%);
+      color: white;
+      border: 1px solid white;
+    }
+  }
+}
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+  button {
+    color: hsl(184, 100%, 22%);
+    &:active {
+      background-color: hsl(184, 100%, 22%);
+      color: white;
+      border: 1px solid white;
+    }
+  }
+}
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  button {
+    color: hsl(184, 100%, 22%);
+    &:active {
+      background-color: hsl(179, 100%, 13%);
+      color: white;
+      border: 1px solid white;
     }
   }
 }
